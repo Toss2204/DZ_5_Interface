@@ -11,13 +11,7 @@ namespace DZ_5_Interface
     {
 
         List<string> _components = new List<string>() { "rotor1", "rotor2", "rotor3", "rotor4" };
-        void IChargeable.Charge()
-        {
-            Console.WriteLine("Charging...");
-            Thread.Sleep(3000);
-            Console.WriteLine("Charged!"); 
-        }
-
+      
         List<string> IRobot.GetComponents()
         {
             return _components;
@@ -27,9 +21,15 @@ namespace DZ_5_Interface
         {
             return "Слово «робот» произошло от чешского - robot, от robota - «подневольный труд» и\n" +
                     "было впервые придумано чешским художником Йозефом Чапеком и использовано его братом,\n" +
-                    "писателем Карелом Чапеком, - впервые в пьесе «Р.у.р.» ( «Россумские универсальные роботы», 1920 г.).";
+                    "писателем Карелом Чапеком, - впервые в пьесе «Р.у.р.» ( «Россумские универсальные роботы», 1920 г.)."
         }
 
+        void IChargeable.Charge()
+        {
+            Console.WriteLine("Charging...");
+            Thread.Sleep(3000);
+            Console.WriteLine("Charged!");
+        }
         string IChargeable.GetInfo()
         {
             return "Робот питается электроэнергией и думает как захватить мир";

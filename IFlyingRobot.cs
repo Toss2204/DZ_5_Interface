@@ -8,7 +8,7 @@ namespace DZ_5_Interface
 {
     public interface IFlyingRobot:IRobot
     {
-        public string GetRobotType()
+        public new string GetRobotType()
         {
             return "I am a flying robot.";
 
