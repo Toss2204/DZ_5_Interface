@@ -9,7 +9,7 @@ namespace DZ_5_Interface
             Console.WriteLine("Сам объект класса ничего не говорит, но через призму интерфейсов можно пообщаться");
 
             Console.WriteLine("IRobot говорит:");
-            IRobot quad1 = quad;//new Quadcopter();
+            IRobot quad1 = quad as IRobot;//new Quadcopter();
             Console.WriteLine(quad1.GetInfo());
             Console.WriteLine(quad1.GetRobotType());
             Console.WriteLine("Компоненты робота:");
@@ -20,13 +20,13 @@ namespace DZ_5_Interface
             Console.WriteLine();
 
             Console.WriteLine("IChargeable говорит:");
-            IChargeable quad2 = quad;//new Quadcopter();
+            IChargeable quad2 = quad as IChargeable;//new Quadcopter();
             quad2.Charge();
             Console.WriteLine(quad2.GetInfo());
             Console.WriteLine();
 
             Console.WriteLine("IFlyingRobot говорит:");
-            IFlyingRobot quad3 = quad;//new Quadcopter();
+            IFlyingRobot quad3 = quad as IFlyingRobot;//new Quadcopter();
             Console.WriteLine(quad3.GetRobotType());
             Console.WriteLine();
 
